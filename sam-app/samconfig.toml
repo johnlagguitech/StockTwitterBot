@@ -6,8 +6,7 @@ version=0.1
  stack_name = "twitter-bot-stack"
  s3_bucket = "twitter-bot-bucket"
  s3_prefix = "my-s3-prefix"
- image_repositories = ["twitter-bot-1=image-repo-1", "twitter-bot-2=image-repo-2"]
- region = "us-west-2"
+ region = "us-east-2"
  confirm_changeset = true
  capabilities = "CAPABILITY_IAM"
- tags = "project=\"twitter-bot\" stage=\"production\""
+ tags = "project=\"twitter-bot\" stage=\"development\""
