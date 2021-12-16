@@ -11,8 +11,3 @@ version=0.1
  confirm_changeset = true
  capabilities = "CAPABILITY_IAM"
  tags = "project=\"twitter-bot\" stage=\"production\""
-
- [default.build.parameters]
- container_env_var = ["Function1.GITHUB_TOKEN=TOKEN1", "Function2.GITHUB_TOKEN=TOKEN2"]
- container_env_var_file = "env.json"
- no_beta_features = true
