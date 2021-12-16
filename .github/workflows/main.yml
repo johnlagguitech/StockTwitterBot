@@ -18,4 +18,4 @@ jobs:
       # Build using SAM
       - run: sam build --use-container --template-file sam-app/template.yaml
       # Deploy on AWS
-      - run: sam deploy --config-file sam-app/samconfig.toml --no-fail-on-empty-changeset --parameter-overrides ParameterKey=MyParam,ParameterValue=${{ secrets.MyParam }}
+      - run: sam deploy --stack-name twitterbot --guided --config-file sam-app/samconfig.toml --no-fail-on-empty-changeset --parameter-overrides ParameterKey=MyParam,ParameterValue=${{ secrets.MyParam }}
