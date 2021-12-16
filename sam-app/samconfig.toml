@@ -1,0 +1,18 @@
+version=0.1
+ [default.global.parameters]
+ stack_name = "twitter-bot-stack"
+ 
+ [default.deploy.parameters]
+ stack_name = "twitter-bot-stack"
+ s3_bucket = "twitter-bot-bucket"
+ s3_prefix = "my-s3-prefix"
+ image_repositories = ["twitter-bot-1=image-repo-1", "twitter-bot-2=image-repo-2"]
+ region = "us-west-2"
+ confirm_changeset = true
+ capabilities = "CAPABILITY_IAM"
+ tags = "project=\"twitter-bot\" stage=\"production\""
+
+ [default.build.parameters]
+ container_env_var = ["Function1.GITHUB_TOKEN=TOKEN1", "Function2.GITHUB_TOKEN=TOKEN2"]
+ container_env_var_file = "env.json"
+ no_beta_features = true
