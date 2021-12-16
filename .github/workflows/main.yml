@@ -16,6 +16,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
       # Build using SAM
-      - run: sam build --use-container --template-file sam-app/template.yaml
+      - run: sam build --use-container --template-file /template.yaml
       # Deploy on AWS
       - run: sam deploy --config-file sam-app/samconfig.toml --no-fail-on-empty-changeset --parameter-overrides ParameterKey=MyParam,ParameterValue=${{ secrets.MyParam }}
